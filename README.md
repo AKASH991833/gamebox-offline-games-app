@@ -24,7 +24,7 @@ All game code and cover art are original, written for this project.
 
 | Home (dark) | Home (light) | 2048 | Brick Breaker | Sudoku |
 |---|---|---|---|---|
-| ![home dark](gamebox-home-dark.png) | ![home light](gamebox-home-light.png) | ![2048](gamebox-2048.png) | ![breakout](gamebox-breakout.png) | ![sudoku](gamebox-sudoku.png) |
+| ![home dark](2-gamebox-home-dark.png) | ![home light](3-gamebox-home-light.png) | ![2048](4-gamebox-2048.png) | ![breakout](5-gamebox-breakout.png) | ![sudoku](6-gamebox-sudoku.png) |
 
 ## Tech stack
 
@@ -42,7 +42,7 @@ All game code and cover art are original, written for this project.
 
 ## Source
 
-The full Android Studio project (Gradle build files, Java shell, all game assets) is in **gamebox-source.zip** at the repo root. Download and unzip it, then follow the Build steps above.
+The full Android Studio project (Gradle build files, Java shell, all game assets) is in **[7-gamebox-source.zip](7-gamebox-source.zip)** at the repo root. Download and unzip it, then follow the Build steps above.
 
 ## Project layout
 
