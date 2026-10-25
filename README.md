@@ -1,6 +1,23 @@
 # GameBox - Offline Games App
 
-[Download v0.5.0 APK](https://github.com/AKASH991833/gamebox-offline-games-app/raw/refs/heads/main/1-gamebox-v0.5.0.apk) | [Full source and tests](2-gamebox-v0.5.0-source.zip) | [Previous v0.4 APK](1-gamebox-v0.4.0.apk)
+[Download v0.6.0 APK](https://github.com/AKASH991833/gamebox-offline-games-app/raw/refs/heads/main/9-gamebox-v0.6.0.apk) | [Full source and tests](10-gamebox-v0.6.0-source.zip) | [Previous v0.5 APK](1-gamebox-v0.5.0.apk)
+
+## v0.6.0 identity correction - 26 October 2026
+
+This update keeps the same 87 games. 53 classic covers have been redrawn as original mechanic-specific compositions rather than reused numbered-tile, board or card templates. All 87 catalog covers and all 87 game screens were visually reviewed. Game-specific surfaces and pieces replace the blanket purple/chess-board treatment, including original tiger/goat faces and a hard-hat worker for Crate Pusher. Pyramid Solitaire covered cards remain fully readable.
+
+The original 31 games now use environment-matched surrounds too. 2048 has a timber tray, Slide15 wood tiles, Sudoku a paper grid, Mines embossed field cells, Tic Tac Toe a chalkboard, Connect Four a raised rack, Memory patterned card backs and Mole a grass/soil playfield. Existing canvas scenes are retained.
+
+No games were added in this update. Related traditional games still share their real rules and board conventions. This is not 87 separate apps, and it is not a claim of 87 unrelated genres. Actual Android install/update, saved-data survival, touch feel and device performance are still unverified.
+
+![Game covers](4-v0.6-icons.png)
+![Tigers and Goats](5-v0.6-tigers-goats.png)
+![Crate Pusher](6-v0.6-crate-pusher.png)
+![2048 timber tray](11-v0.6-2048.png)
+![Sudoku paper grid](12-v0.6-sudoku.png)
+![Mole field](13-v0.6-mole.png)
+
+
 
 87 offline games for Android 7.0 and newer. English interface, no accounts, no ads, no payment and no declared Android permissions.
 
@@ -21,14 +38,10 @@ Eight existing games and the shared interface have graphics updates: Road Rush, 
 Control and logic fixes include swipe/tap separation, pause and canceled input, readable dialogs, keyboard catalog navigation, short-screen layout, Snake tail/full-board behavior, Maze Run cell-center movement, Brick Breaker reflection and 2048 restart/undo animation isolation.
 
 ![Catalog](3-v0.5-catalog.png)
-![Carrom Studio](4-v0.5-carrom.png)
-![Circuit Keep in play](5-v0.5-defense.png)
-![Pocket Greens aiming](6-v0.5-golf.png)
-![Orbit Pinball in play](7-v0.5-pinball.png)
 
 ## Verification and limits
 
-- APK package `com.akash.gamebox`, version code 5, version 0.5.0. Minimum SDK 24, target SDK 33.
+- APK package `com.akash.gamebox`, version code 6, version 0.6.0. Minimum SDK 24, target SDK 33.
 - APK signature verified. Certificate SHA-256 matches the previous release: `90e31baeca81d48549cb2e9793dd52a1f0effb7e61d08c5502af96597b978fec`.
 - All 614 app asset files matched the checked source byte for byte.
 - 87 browser game-page launches passed with external requests blocked and the canvas roundRect API removed to test the fallback. All 87 also launched via file:// in desktop Chromium.
