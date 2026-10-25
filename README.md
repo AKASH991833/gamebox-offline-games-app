@@ -1,10 +1,12 @@
 # GameBox - Offline Games App
 
-[Download v0.6.0 APK](https://github.com/AKASH991833/gamebox-offline-games-app/raw/refs/heads/main/9-gamebox-v0.6.0.apk) | [Full source and tests](10-gamebox-v0.6.0-source.zip) | [Previous v0.5 APK](1-gamebox-v0.5.0.apk)
+[Download v0.6.0 APK](https://github.com/AKASH991833/gamebox-offline-games-app/raw/refs/heads/main/14-gamebox-v0.6.0-final.apk) | [Full source and tests](15-gamebox-v0.6.0-final-source.zip) | [Previous v0.5 APK](1-gamebox-v0.5.0.apk)
+
+Use the final APK and source linked above. Other v0.6 files are intermediate checkpoints kept for history, not the recommended download. Older delivered v0.4 and v0.5 builds remain available.
 
 ## v0.6.0 identity correction - 26 October 2026
 
-This update keeps the same 87 games. 53 classic covers have been redrawn as original mechanic-specific compositions rather than reused numbered-tile, board or card templates. All 87 catalog covers and all 87 game screens were visually reviewed. Game-specific surfaces and pieces replace the blanket purple/chess-board treatment, including original tiger/goat faces and a hard-hat worker for Crate Pusher. Pyramid Solitaire covered cards remain fully readable.
+This update keeps the same 87 games. 53 classic covers have been redrawn as original mechanic-specific compositions rather than reused numbered-tile, board or card templates. All 87 catalog covers and all 87 game screens were visually reviewed. Game-specific surfaces and pieces replace the blanket purple/chess-board treatment, including original tiger/goat faces and a hard-hat worker for Crate Pusher. Pyramid Solitaire covered cards remain fully readable. Mole shows a disabled "Round running" control during a round; active clicks cannot reset its timer or score.
 
 The original 31 games now use environment-matched surrounds too. 2048 has a timber tray, Slide15 wood tiles, Sudoku a paper grid, Mines embossed field cells, Tic Tac Toe a chalkboard, Connect Four a raised rack, Memory patterned card backs and Mole a grass/soil playfield. Existing canvas scenes are retained.
 
@@ -15,7 +17,7 @@ No games were added in this update. Related traditional games still share their 
 ![Crate Pusher](6-v0.6-crate-pusher.png)
 ![2048 timber tray](11-v0.6-2048.png)
 ![Sudoku paper grid](12-v0.6-sudoku.png)
-![Mole field](13-v0.6-mole.png)
+![Mole field](16-v0.6-mole-active.png)
 
 
 
