@@ -1,47 +1,73 @@
 # GameBox - Offline Games App
 
-24 classic mini-games in one tiny, fully offline Android app. No internet permission, no ads, no accounts - install and play anywhere.
+80 offline games for Android 7.0 and newer: the existing 24 mini-games plus 56 new board, card and puzzle games. English interface, no accounts, no ads, no payment and no Android permissions.
 
-**Download APK (v0.3.0):** https://drive.google.com/file/d/1JcyQ1lEvtIzlWr7wt5g5O0zq5dcf6xYi/view (APK is ~0.1 MB. Google Drive shows a standard "Download anyway" prompt for APK files.)
+[Download v0.4.0 APK](1-gamebox-v0.4.0.apk) (1.41 MB) | [Complete source ZIP](2-gamebox-v0.4.0-source.zip). This is a test build with the device-testing limits below.
 
-**Source code:** [gamebox-v0.3.0-source.zip](gamebox-v0.3.0-source.zip)
+## v0.4.0 - 25 October 2026
 
-## What's new in v0.3.0 (25 Oct 2026)
+- Searchable catalog with categories, favorites and illustrated game covers.
+- Ludo with colored pawns, wooden chess board, colored Snakes and Ladders, and felt-table solitaire cards.
+- Local rules pages and Home navigation. Game saves remain on the device.
+- No network dependency in play. Online chess and upstream update services are not included.
+- Package `com.akash.gamebox`, version code 4. Release signing certificate matches the previous release. Actual update installation and save retention have not been tested on an Android device; do not uninstall the previous app when trying an update.
 
-- **12 new games** (12 -> 24 total): Block Drop, Galaxy Guard, Dash Runner, Road Rush, Crossy Dash, Bubble Pop, Target Tap, Maze Run, Connect Four, Slide 15, Lights Out, Word Guess.
-- New games share the same shell as the originals: Home/back navigation, pause (action games), sound toggle, how-to-play rules, per-game best scores, dark/light themes, delta-time loops with devicePixelRatio-crisp canvas.
-- Connect Four ships with Easy/Normal/Hard AI (alpha-beta minimax) plus a 2-player mode; Word Guess, Slide 15 and Lights Out track best streaks / fewest moves.
-- Installs as an update over v0.2.0 (same signing key); best scores and favorites carry over.
+## Added games
 
-### v0.2.0 (24 Oct 2026)
+### Board
 
-- Proper navigation, pause/resume/restart, rules, delta-time game loops, small-screen layouts, Memory Match icons fixed.
+Ludo, Chess, Snakes and Ladders, Dominoes, Checkers, Reversi, Backgammon, Mancala, Tigers and Goats, Nine Men's Morris, Go, Five in a Row, Hex, Dots and Boxes, Chinese Checkers, Royal Game of Ur, Fleet Battle, Fanorona, Halma, Viking Tafl, Konane, Surakarta, Tablut, Seega, Alquerque, Fox and Geese.
 
-## Games
+### Cards
 
-**Puzzle:** 2048, Sudoku, Tic Tac Toe, Memory Match, Mine Sweeper, Block Drop, Maze Run, Connect Four, Slide 15, Lights Out, Word Guess
-**Arcade:** Snake Rush, Brick Breaker, Flappy Dot, Tower Stack, Galaxy Guard, Dash Runner, Road Rush, Crossy Dash, Bubble Pop
-**Action:** Mole Smash, Beat Echo, Paddle Clash, Target Tap
+Klondike Solitaire, Spider Solitaire, FreeCell, Pyramid Solitaire, Crazy Eights, Old Maid, Card War.
 
-All game code and cover art are original, written for this project.
+### Puzzle
 
-## Features
+Nonogram, Mahjong Solitaire, Kakuro, Calcudoku, Futoshiki, Peg Solitaire, Crate Pusher, Bridges, Loop Puzzle, Skyscrapers, Tangram, Link Pairs, Bulls and Cows, Pentomino, Math Cross, Matchstick Puzzles, No Neighbors, Number Pairs, Arrow Paths, Ring Puzzle, Shape Sort, Shadow Match, Odd One Out.
 
-- 100% offline: the app has no INTERNET permission at all
-- Dark and light themes
-- Favorite games list
-- Best-score tracking per game (stored on-device)
-- Share the app via the native Android share sheet
-- English UI
+## Existing 24 games retained
+
+2048, Snake Rush, Tic Tac Toe, Memory Match, Mine Sweeper, Brick Breaker, Flappy Dot, Sudoku, Tower Stack, Mole Smash, Beat Echo, Paddle Clash, Block Drop, Galaxy Guard, Dash Runner, Road Rush, Crossy Dash, Bubble Pop, Target Tap, Maze Run, Connect Four, Slide 15, Lights Out and Word Guess.
+
+## Verification and limits
+
+- All 56 added games passed a desktop Chromium loading/basic-interaction smoke test with external network requests blocked: no JavaScript errors, missing assets or horizontal overflow at 390px.
+- All 56 rules pages passed loading/layout checks at 360px. These are not exhaustive rules proofs.
+- All original 24 game pages loaded without JavaScript errors or horizontal overflow at 360px.
+- Search, categories, favorites across reload, and catalog/game/Home navigation checked.
+- Real Klondike stock draw and Ace-to-foundation move checked, including two-digit card rendering. Ludo roll and selected core movement rules checked.
+- Chess initial position has 20 legal moves; Fool's Mate is recognized as Black checkmate.
+- Upstream randomized core tests passed for Dominoes, Old Maid, War, Snakes and Ladders, Math Cross, Matchstick Puzzles, Number Pairs, Shape Sort, Shadow Match, Link Pairs, Odd One Out, Ring Puzzle and Pentomino. Arrow Paths exhaustive run exceeded the time bound; its basic interaction smoke test passed, but exhaustive testing remains incomplete.
+- Four representative games launched under file://. Desktop 4x CPU throttling checked representative startup only. Android installation, touch behavior, long play sessions, memory use, battery use and low-end-device performance remain unverified.
+
+This is a 2D classic-games batch. It does not complete every screenshot reference, action/driving/cricket/carrom request, or the longer-term worldwide catalog ambition. No proprietary game code or commercial artwork was copied.
+
+## Source and licences
+
+The original 24 games are retained from GameBox v0.3.0. The 56 added games adapt PaperGames v253, checked out at MIT-licensed revision `ce68675` (before its later licence change): https://github.com/YourChaosChris/PaperGames
+
+See `app/src/main/assets/www/classics/LICENSE.txt`, `NOTICE.txt` and `credits.html` (including the complete BSD-3-Clause chess-artwork text). The cburnett chess artwork uses its BSD licence option. The upstream notices are retained; some refer to upstream games/assets not shipped in this selected collection. New GameBox wrapper styling, colored board treatments, pawn artwork and mechanic covers accompany those rules engines. Do not assume the current upstream licence is the same as this historical revision.
+
+## Build
+
+Native Android Activity and hardware-accelerated WebView, vanilla HTML/CSS/JavaScript. Android Gradle Plugin 7.4.2, Gradle 7.6.4, JDK 11, compile/target SDK 33, min SDK 24.
+
+1. Install JDK 11, Gradle 7.6.4 and Android SDK 33/build-tools 33.0.2.
+2. Set `ANDROID_HOME` or create a local `local.properties` pointing to the SDK.
+3. Run `gradle assembleDebug` for a local debug build.
+4. For release signing, supply your own `gamebox.keystore` with alias `gamebox` and set `GB_STORE_PASSWORD` and `GB_KEY_PASSWORD`, then run `gradle assembleRelease`. The production key and passwords are intentionally not in this source archive. A different signing key cannot update an existing production installation.
+
+Screenshots are browser captures at phone-sized viewports, not Android-device captures.
 
 ## Screenshots
 
-| Home (dark) | Home (light) | 2048 | Brick Breaker | Sudoku |
-|---|---|---|---|---|
-| ![home dark](2-gamebox-home-dark.png) | ![home light](3-gamebox-home-light.png) | ![2048](4-gamebox-2048.png) | ![breakout](5-gamebox-breakout.png) | ![sudoku](6-gamebox-sudoku.png) |
+![Catalog](3-v0.4-catalog.png)
 
-## Tech
+![Ludo](4-v0.4-ludo.png)
 
-Native Android (minSdk 24 / Android 7.0+) shell hosting a hardware-accelerated WebView. Games are vanilla HTML/CSS/JS in `app/src/main/assets/www` - no frameworks, no bundler.
+![Chess](5-v0.4-chess.png)
 
-Build: `gradle assembleRelease` (AGP 7.4.2, Gradle 7.6.4). Signed with the same key since v0.1.0, so updates install over earlier versions and Android keeps local data (best scores, favorites, theme).
+![Klondike](6-v0.4-klondike.png)
+
+![Snakes and Ladders](7-v0.4-snakesladders.png)
